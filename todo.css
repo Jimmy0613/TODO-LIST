@@ -1,0 +1,82 @@
+.container {
+    width: 500px;
+    height: 600px;
+    background-color: aliceblue;
+    margin-left: calc(50% - 250px);
+    margin-top: 100px;
+}
+
+.header h1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+ul {list-style: none;}
+ul {
+    display: flex;
+}
+ul>li>a {text-decoration: none;}
+
+ul.filter {
+    flex-direction: row;
+    gap: 10px;
+}
+
+ul.filter>li a {
+    font-size: large;
+    color:silver;
+}
+
+ul.filter>li.active>a {
+    color: cornflowerblue;
+    font-weight: 700;
+}
+
+
+ul.list {
+    flex-direction: column;
+    gap: 5px;
+}
+
+ul.list>li div.todo__box {
+    display: flex;
+    width: 400px;
+    height: 24px;
+    border-bottom: 1px solid green;
+    position: relative;
+}
+
+ul.list>li:not(.additional, .active) {
+    display: none;
+}
+
+ul.list>li .todo__box input {
+    font-size: 14px;
+    border: none;
+    background-color: inherit;
+}
+
+ul.list>li.completed .todo__box input {
+    text-decoration-line: line-through;
+}
+
+ul.list>li .todo__box input:focus {
+    outline: none;
+}
+
+ul.list>li .todo__box button:hover {
+    cursor: pointer;
+}
+
+ul.list>li .todo__box button {
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+    right: 2px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    color: white;
+    background-color: black;
+}
